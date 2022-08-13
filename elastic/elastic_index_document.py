@@ -1,7 +1,7 @@
 from datetime import datetime
 from elasticsearch import Elasticsearch
 
-es = Elasticsearch('https://localhost:9200')
+es = Elasticsearch('http://localhost:9200')
 
 document = {
 	"name": "Luke Skywalker",
