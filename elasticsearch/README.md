@@ -47,6 +47,11 @@ Output:
 ...
 ```
 
+Now we are able to enter into the running image in order to execute some examples
+```sh
+docker exec -it elastic_7 /bin/bash
+```
+
 ## How to connect
 This is an example to learn how to connect to elasticsearch.
 File: [elastic_first_connection.py](elastic_first_connection.py)
@@ -63,7 +68,7 @@ print(resp)
 
 How to run the code:
 ```sh
-python elastic_first_connection.py
+python3 elastic_first_connection.py
 ```
 
 Output:
