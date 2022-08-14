@@ -2,10 +2,14 @@
 This repository explains how to use the elk stack
 
 ## Table of Contents
-* [Elastic](#elastic)
+* [Elasticsearch](#elasticsearch)
 * [Kibana](#kibana)
 * [Logstash](#logstash)
 
 ## Elastic
+In this section we are going to learn how to use elasticsearch with basic commands
+
+[Go to Elasticsearch](/elasticsearch)
+
 ## Kibana
 ## Logstash
