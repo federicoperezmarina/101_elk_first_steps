@@ -141,6 +141,28 @@ created
 ```
 
 ## Get document
+In this section we are goin to get a document from an index of elasticsearch.
+File: [elasticsearch_get_document.py](elasticsearch_get_document.py)
+
+Code:
+```python
+from elasticsearch import Elasticsearch
+
+es = Elasticsearch('http://localhost:9200')
+
+resp = es.get(index="starwars-characters", id=1)
+print(resp)
+```
+
+How to run the code:
+```sh
+python3 elastic_get_document.py
+```
+
+Output:
+```sh
+{'_index': 'starwars-characters', '_type': '_doc', '_id': '1', '_version': 1, '_seq_no': 0, '_primary_term': 1, 'found': True, '_source': {'name': 'Luke Skywalker', 'height': '172', 'mass': '77', 'hair_color': 'blond', 'skin_color': 'fair', 'eye_color': 'blue', 'birth_year': '19BBY', 'gender': 'male', 'homeworld': 'https://swapi.dev/api/planets/1/', 'films': ['https://swapi.dev/api/films/2/', 'https://swapi.dev/api/films/6/', 'https://swapi.dev/api/films/3/', 'https://swapi.dev/api/films/1/', 'https://swapi.dev/api/films/7/'], 'species': ['https://swapi.dev/api/species/1/'], 'vehicles': ['https://swapi.dev/api/vehicles/14/', 'https://swapi.dev/api/vehicles/30/'], 'starships': ['https://swapi.dev/api/starships/12/', 'https://swapi.dev/api/starships/22/'], 'created': '2014-12-09T13:50:51.644000Z', 'edited': '2014-12-20T21:17:56.891000Z', 'url': 'https://swapi.dev/api/people/1/', 'timestamp': '2022-08-16T14:55:26.117959'}}
+```
 
 ## Refresh index
 
