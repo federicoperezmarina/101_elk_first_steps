@@ -35,7 +35,7 @@ docker build -t elasticsearch_7 .
 
 In the third step we are going to run the the docker build image
 ```sh
-docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch_7
+docker run --name my_elasticsearch_7 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch_7
 ```
 
 Output:
@@ -71,8 +71,13 @@ How to run the code:
 python3 elastic_first_connection.py
 ```
 
+We can avoid the first lines of the output because we haven't configured the security, so that's the reason for the message.
+
 Output:
 ```sh
+elastic_first_connection.py:5: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security.
+  resp = es.info()
+
 {'name': '0d5e6362fc25', 'cluster_name': 'docker-cluster', 'cluster_uuid': '8zVf_MuGTLGbUyFQFjALYQ', 'version': {'number': '7.17.5', 'build_flavor': 'default', 'build_type': 'docker', 'build_hash': '8d61b4f7ddf931f219e3745f295ed2bbc50c8e84', 'build_date': '2022-06-23T21:57:28.736740635Z', 'build_snapshot': False, 'lucene_version': '8.11.1', 'minimum_wire_compatibility_version': '6.8.0', 'minimum_index_compatibility_version': '6.0.0-beta1'}, 'tagline': 'You Know, for Search'}
 ```
 
