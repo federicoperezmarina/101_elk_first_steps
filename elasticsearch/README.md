@@ -49,7 +49,7 @@ Output:
 
 Now we are able to enter into the running image in order to execute some examples
 ```sh
-docker exec -it elastic_7 /bin/bash
+docker exec -it my_elasticsearch_7 /bin/bash
 ```
 
 ## How to connect
