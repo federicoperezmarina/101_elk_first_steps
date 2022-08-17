@@ -141,7 +141,7 @@ created
 ```
 
 ## Get document
-In this section we are goin to get a document from an index of elasticsearch.
+In this section we are going to get a document from an index of elasticsearch.
 File: [elasticsearch_get_document.py](elasticsearch_get_document.py)
 
 Code:
@@ -165,9 +165,140 @@ Output:
 ```
 
 ## Refresh index
+In this section we are going to refresh an index of elasticsearch
+File: [elastic_refresh_index.py](elastic_refresh_index.py)
+
+Code:
+```python
+from elasticsearch import Elasticsearch
+
+es = Elasticsearch('http://localhost:9200')
+
+res = es.indices.refresh(index="starwars-characters")
+print(res)
+```
+
+How to run the code:
+```sh
+python3 elastic_refresh_index.py
+```
+
+Output:
+```sh
+{'_shards': {'total': 2, 'successful': 1, 'failed': 0}}
+```
 
 ## Search document
+In this section we are going to search in a index of elasticsearch
+File: [elastic_search_document.py](elastic_search_document.py)
+
+Code:
+```python
+from elasticsearch import Elasticsearch
+
+es = Elasticsearch('http://localhost:9200')
+
+resp = es.search(index="starwars-characters", query={"match_all": {}})
+
+#print(resp)
+
+print("Got %d Hits:" % resp['hits']['total']['value'])
+for hit in resp['hits']['hits']:
+    print("%(name)s" % hit["_source"])
+```
+
+How to run the code:
+```sh
+python3 elastic_search_document.py
+```
+
+Output:
+```sh
+Got 1 Hits:
+Luke Skywalker
+```
 
 ## Update document
+In this section we are going to update a document from index in elasticsearch
+File: [elastic_update_document.py](elastic_update_document.py)
+
+Code:
+```python
+from datetime import datetime
+from elasticsearch import Elasticsearch
+
+es = Elasticsearch('http://localhost:9200')
+
+document = {
+    "name": "Luke Skywalker (the best)",
+    "height": "172",
+    "mass": "77",
+    "hair_color": "blond",
+    "skin_color": "fair",
+    "eye_color": "blue",
+    "birth_year": "19BBY",
+    "gender": "male",
+    "homeworld": "https://swapi.dev/api/planets/1/",
+    "films": [
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/6/",
+        "https://swapi.dev/api/films/3/",
+        "https://swapi.dev/api/films/1/",
+        "https://swapi.dev/api/films/7/"
+    ],
+    "species": [
+        "https://swapi.dev/api/species/1/"
+    ],
+    "vehicles": [
+        "https://swapi.dev/api/vehicles/14/",
+        "https://swapi.dev/api/vehicles/30/"
+    ],
+    "starships": [
+        "https://swapi.dev/api/starships/12/",
+        "https://swapi.dev/api/starships/22/"
+    ],
+    "created": "2014-12-09T13:50:51.644000Z",
+    "edited": "2014-12-20T21:17:56.891000Z",
+    "url": "https://swapi.dev/api/people/1/",
+    'timestamp': datetime.now(),
+}
+
+resp = es.update(index="starwars-characters", id=1, body={"doc":document})
+print(resp['result'])
+```
+
+How to run the code:
+```sh
+python3 elastic_update_document.py
+```
+
+Output:
+```sh
+Got 1 Hits:
+Luke Skywalker
+```
 
 ## Delete document
+In this section we are going to delete a document in index of elasticsearch
+File: [elastic_delete_document.py](elastic_delete_document.py)
+
+Code:
+```python
+from elasticsearch import Elasticsearch
+
+es = Elasticsearch('http://localhost:9200')
+
+resp = es.delete(index="starwars-characters", id=1)
+
+print(resp['result'])
+```
+
+How to run the code:
+```sh
+python3 elastic_delete_document.py
+```
+
+Output:
+```sh
+deleted
+```
