@@ -12,4 +12,8 @@ In this section we are going to learn how to use elasticsearch with basic comman
 [Go to Elasticsearch](/elasticsearch)
 
 ## Kibana
+In this section we are going to learn how to use kibana
+
+[Go to Kibana](/kibana)
+
 ## Logstash
