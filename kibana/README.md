@@ -3,7 +3,7 @@ Here we have some examples to learn how to use kibana
 
 ## Table of Contents
 * [Kibana with docker](#kibana-with-docker)
-* [How to connect](#how-to-connect)
+* [Kibana wellcome](#kibana-wellcome)
 
 ## Kibana with docker
 In order to use Kibana with docker we are going to use docker compose to start a elasticsearch container and a kibana container.
@@ -93,3 +93,47 @@ Your verification code is:  XXX XXX
 
 ![Kibana configure elastic](img/kibana_configure_elastic.png)
 ![Kibana login](img/kibana_login.png)
+
+The last step is configure all the passwords. In order to do it, we have to enter in my_elasticsearch_8 container and execute:
+```sh
+docker exec -it my_elasticsearch_8 /bin/bash
+bin/elasticsearch-setup-passwords auto 
+```
+
+Output:
+```sh
+******************************************************************************
+Note: The 'elasticsearch-setup-passwords' tool has been deprecated. This       command will be removed in a future release.
+******************************************************************************
+
+Initiating the setup of passwords for reserved users elastic,apm_system,kibana,kibana_system,logstash_system,beats_system,remote_monitoring_user.
+The passwords will be randomly generated and printed to the console.
+Please confirm that you would like to continue [y/N]y
+
+
+Changed password for user apm_system
+PASSWORD apm_system = VS8aZj4SDlP2SPnmnoAw
+
+Changed password for user kibana_system
+PASSWORD kibana_system = sJaSikzbNlaZvAIqXQBZ
+
+Changed password for user kibana
+PASSWORD kibana = sJaSikzbNlaZvAIqXQBZ
+
+Changed password for user logstash_system
+PASSWORD logstash_system = IfQYF2RtKIoXoWALPRey
+
+Changed password for user beats_system
+PASSWORD beats_system = kXBoyCNXtTl3aODUXTHN
+
+Changed password for user remote_monitoring_user
+PASSWORD remote_monitoring_user = D8clsLQsJBpJDnbYkVKt
+
+Changed password for user elastic
+PASSWORD elastic = YvwWrKTsa2rzGEQU8BE3
+```
+
+Finally we are able to login in kibana "http://localhost:5601/" with the user elastic and the password generated.
+
+
+## Kibana wellcome
