@@ -1,15 +1,3 @@
-# Kibana
-Here we have some examples to learn how to use kibana
-
-## Table of Contents
-* [Kibana with docker](#kibana-with-docker)
-* [How to connect](#how-to-connect)
-
-## Kibana with docker
-In order to use Kibana with docker we are going to use docker compose to start a elasticsearch container and a kibana container.
-
-docker-compose.yml file:
-```sh
 services:
   elasticsearch:
     image: elasticsearch:8.3.3
@@ -39,10 +27,3 @@ services:
 networks:
   elastic:
     driver: bridge
-```
-
-To launch the docker compose we can use this command:
-```sh
-docker compose up
-```
-
