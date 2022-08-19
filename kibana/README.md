@@ -173,3 +173,6 @@ Now we are able to go and discover data at ""http://localhost:5601/app/discover#
 
 
 ## Kibana Analytics - Discover
+In the Discovery part we can select and index and then filter the data.
+
+![Kibana Discover Filtering](img/kibana_discover_filtering.png)
