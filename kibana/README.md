@@ -138,21 +138,26 @@ Finally we are able to login in kibana "http://localhost:5601/" with the user el
 
 ## Kibana wellcome
 In the next image we can see the wellcome or home of kibana.
+
 ![Kibana home](img/kibana_home.png)
 
 Now we are going to create some indexes with the resources that we have and also adding some sampling data that kibana gives to us in order to start playing with.
 
 ### Kibana csv integrations
 We are going to create 5 indexes with the 5 csv of starwars that we have in the resources folder. We have to click on "Upload a file". 
+
 ![Kibana file](img/kibana_upload_csv.png)
 
 First of all we are going to upload "resources/starwars-characters.csv". Once we have selected the file, kibana gives some information about the csv.
+
 ![Kibana Upload Starwars Characters](img/kibana_upload_starwars_characters.png)
 
 Then we have to click on "import" button. In this step kibana is going to ask for the name of the index. We can name it "starwars-characters".
+
 ![Kibana Index Name](img/kibana_index_name.png)
 
 We can repeat the import of csv with all the resources. After the creation of all the index and the import of the documents we can go to "http://localhost:5601/app/discover#/" and select the index "starwars-characters" to start searching documents with kibana.
+
 ![Kibana Created Indexes](img/kibana_created_indexes.png)
 
 
