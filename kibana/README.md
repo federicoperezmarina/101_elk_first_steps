@@ -4,6 +4,7 @@ Here we have some examples to learn how to use kibana
 ## Table of Contents
 * [Kibana with docker](#kibana-with-docker)
 * [Kibana wellcome](#kibana-wellcome)
+* [Kibana Analytics - Discover](#kibana-analytics---discover)
 
 ## Kibana with docker
 In order to use Kibana with docker we are going to use docker compose to start a elasticsearch container and a kibana container.
@@ -160,4 +161,15 @@ We can repeat the import of csv with all the resources. After the creation of al
 
 ![Kibana Created Indexes](img/kibana_created_indexes.png)
 
+Before starting using the discovery section we are going to add some sample data.
 
+### Kibana sample data integrations
+
+We can go to the url "http://localhost:5601/app/home#/tutorial_directory/sampleData" in order to add one of the three sample data that gives to us kibana. We will choose the "Sample flight data" then we have to click on "Add data".
+
+![Kibana Sample Data](img/kibana_sample_data.png)
+
+Now we are able to go and discover data at ""http://localhost:5601/app/discover#/""
+
+
+## Kibana Analytics - Discover
