@@ -174,9 +174,19 @@ Now we are able to go and discover data at ""http://localhost:5601/app/discover#
 
 ## Kibana Analytics - Discover
 In the Discovery part we have some uses cases:
-- Select data view (index)
-- Filter data with a filter
-- Filter data using KQL syntax
-- Select fields
+* [Select data view (index)](#select-data-view--index-)
+* [Filter data with a filter](#filter-data-with-a-filter)
+* [Filter data using KQL syntax](#filter-data-using-kql-syntax)
+* [Select fields](#select-fields)
 
+### Select data view (index)
+Selecting the data view we can start doing the discovery. In our case we have 5 data views created (starwars) and another view of flights. We can see that in the next image.
+
+![Kibana Index Name](img/kibana_index_name.png)
+
+### Filter data with a filter
+
+### Filter data using KQL syntax
+
+### Select fields
 ![Kibana Discover Filtering](img/kibana_discover_filtering.png)
