@@ -174,19 +174,27 @@ Now we are able to go and discover data at ""http://localhost:5601/app/discover#
 
 ## Kibana Analytics - Discover
 In the Discovery part we have some uses cases:
-* [Select data view (index)](#select-data-view--index-)
+* [Select data view](#select-data-view)
 * [Filter data with a filter](#filter-data-with-a-filter)
 * [Filter data using KQL syntax](#filter-data-using-kql-syntax)
 * [Select fields](#select-fields)
 
 ### Select data view (index)
-Selecting the data view we can start doing the discovery. In our case we have 5 data views created (starwars) and another view of flights. We can see that in the next image.
+Selecting the data view we can start doing the discovery, sometimes our data views are the same as our indexes. In our case we have 5 data views created (starwars) and another view of flights. We can see that in the next image.
 
 ![Kibana Index Name](img/kibana_index_name.png)
 
 ### Filter data with a filter
+A good way to start discovering data is using the filter that is given by kibana. We are going to use it selecting the field "name" using the operator "is" and giving a value "Anakin Skywalker".
+
+![Kibana Discover Filtering Data](img/kibana_discover_filter_data.png)
 
 ### Filter data using KQL syntax
+Another way to discover data is using KQL syntax. We are going to do the same example. We write the next query 'name : "Anakin Skywalker"' having the same result.
+
+![Kibana Discover KQL Syntax](img/kibana_discover_kql_syntax.png)
 
 ### Select fields
-![Kibana Discover Filtering](img/kibana_discover_filtering.png)
+In this section we are able to select the fields that we want to show the data in the right part.
+
+![Kibana Discover Selecting Fields](img/kibana_discover_select_fields.png)
