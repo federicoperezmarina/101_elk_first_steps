@@ -5,6 +5,10 @@ Here we have some examples to learn how to use kibana
 * [Kibana with docker](#kibana-with-docker)
 * [Kibana wellcome](#kibana-wellcome)
 * [Kibana Analytics - Discover](#kibana-analytics---discover)
+* [Kibana Analytics - Visualize Library](#kibana-analytics---visualize-library)
+* [Kibana Analytics - Dashboard](#kibana-analytics---dashboard)
+* [Kibana Analytics - Canvas](#kibana-analytics---canvas)
+* [Kibana Analytics - Maps](#kibana-analytics---maps)
 
 ## Kibana with docker
 In order to use Kibana with docker we are going to use docker compose to start a elasticsearch container and a kibana container.
@@ -69,7 +73,7 @@ docker exec -it my_elasticsearch_8 /bin/bash
 
 And after execute this command inside my_elasticsearch_8 container
 ```sh
-in/elasticsearch-create-enrollment-token --scope kibana
+bin/elasticsearch-create-enrollment-token --scope kibana
 ```
 
 Output:
@@ -179,7 +183,7 @@ In the Discovery part we have some uses cases:
 * [Filter data using KQL syntax](#filter-data-using-kql-syntax)
 * [Select fields](#select-fields)
 
-### Select data view (index)
+### Select data view
 Selecting the data view we can start doing the discovery, sometimes our data views are the same as our indexes. In our case we have 5 data views created (starwars) and another view of flights. We can see that in the next image.
 
 ![Kibana Index Name](img/kibana_index_name.png)
@@ -198,3 +202,45 @@ Another way to discover data is using KQL syntax. We are going to do the same ex
 In this section we are able to select the fields that we want to show the data in the right part.
 
 ![Kibana Discover Selecting Fields](img/kibana_discover_select_fields.png)
+
+
+## Kibana Analytics - Visualize Library
+In the Visualize Library section we are able to:
+* [List visualizations](#list-visualizations)
+* [Create visualization](#create-visualization)
+* [Edit visualization](#edit-visualization)
+
+### List visualizations
+### Create visualization
+### Edit visualization
+
+## Kibana Analytics - Dashboard
+In the Dashboard section we are able to:
+* [List dashboards](#list-dashboards)
+* [Create dashboard](#create-dashboard)
+* [Edit dashboard](#edit-dashboard)
+
+### List dashboards
+### Create dashboard
+### Edit dashboard
+
+## Kibana Analytics - Canvas
+In the Canvas section we are able to:
+* [List canvas](#list-canvas)
+* [Create canvas](#create-canvas)
+* [Edit canvas](#edit-canvas)
+
+### List canvas
+### Create canvas
+### Edit canvas
+
+
+## Kibana Analytics - Maps
+In the Maps section we are able to:
+* [List maps](#list-maps)
+* [Create map](#create-map)
+* [Edit map](#edit-map)
+
+### List maps
+### Create map
+### Edit map
