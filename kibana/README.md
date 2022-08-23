@@ -211,6 +211,12 @@ In the Visualize Library section we are able to:
 * [Edit visualization](#edit-visualization)
 
 ### List visualizations
+In the section Kibana Analytics - Visualize Library we are able to see all the graphs saved in a library. We can use all of them in our dashboards and in our canvas. In the next image we will see a list of visualizations saved until now.
+
+In the image we are going to see five visualizations of "Starwars". All of them are from "Starwars" indexes. Also we will see other visualizations of flights. They come from the data example of flights.
+
+![Kibana Discover - Visualize Library List](img/kibana_discover_visualize_library_list.png)
+
 ### Create visualization
 ### Edit visualization
 
