@@ -218,7 +218,22 @@ In the image we are going to see five visualizations of "Starwars". All of them 
 ![Kibana Discover - Visualize Library List](img/kibana_discover_visualize_library_list.png)
 
 ### Create visualization
+In the creation part we are going to see an gif image showing/explaining the steps to create a new visualization:
+1. Click on create button
+2. Select Lens (tool of kibana to help creating visualizations)
+3. Select the index
+4. Select the fields for the visualization
+5. Save visualization as "[Starwars] Characters by Gender"
+
+![Kibana Discover - Visualize Library Create](img/kibana_discover_visualize_library_create.gif)
+
 ### Edit visualization
+In the edition part we are going to edit the visualization "[Starwars] Characters by Gender" and modify the graph with bars into a donut chart.
+1. Edit "[Starwars] Characters by Gender"
+2. Select Donut chart type
+3. Save the modifications
+
+![Kibana Discover - Visualize Library Edit](img/kibana_discover_visualize_library_edit.png)
 
 ## Kibana Analytics - Dashboard
 In the Dashboard section we are able to:
