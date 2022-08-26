@@ -242,6 +242,8 @@ In the Dashboard section we are able to:
 * [Edit dashboard](#edit-dashboard)
 
 ### List dashboards
+In the section Kibana Analytics - Dashboard, we are able to see all the dashboards created. This dasboards are a group of visualizations.
+
 ### Create dashboard
 ### Edit dashboard
 
